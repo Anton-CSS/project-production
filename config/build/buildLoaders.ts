@@ -28,8 +28,20 @@ export const buildRules = (isDev: BuildOptions['isDev']): webpack.RuleSetRule[] 
       ]
     }
 
+    const svgRule = {
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    }
+
+    const imageRule = {
+        test: /\.(jpe?g|png|gif)$/i,
+      type: 'asset/resource'
+    }
+
   return [
     typeScriptRule,
-    CSSRule
+    CSSRule,
+    svgRule,
+    imageRule
   ]
 }

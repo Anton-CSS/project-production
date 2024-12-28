@@ -14,12 +14,13 @@ export const buildWebpackConfig = ( options: BuildOptions ):webpack.Configuratio
     output: {
       filename: '[name].[contenthash].js',
       path: paths.outputPath,
+      assetModuleFilename: 'images/[hash][ext][query]',
       clean: true
     },
     devtool: isDev && 'inline-source-map',
     devServer: isDev && buildDevServer(port),
-    resolve: buildResolve(),
-    plugins: buildPlugin(paths.htmlPath),
+    resolve: buildResolve(paths.srcPath),
+    plugins: buildPlugin(paths.htmlPath, isDev),
     module: {
       rules: buildRules(isDev),
     },
