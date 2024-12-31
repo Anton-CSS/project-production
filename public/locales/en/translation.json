@@ -2,5 +2,8 @@
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
   "О сайте": "About",
-  "Язык": "English"
+  "Язык": "English",
+  "Упс": "Oops!",
+  "К сожалению, произошла непредвиденная ошибка": "Sorry, an unexpected error has occurred.",
+  "Старница об ошибке": "Error Page"
 }

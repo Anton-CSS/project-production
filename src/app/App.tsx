@@ -8,6 +8,7 @@ import { SideBar } from 'widgets/SideBar'
 
 const App = () => {
   const { theme } = use(ThemeContext);
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<h2>Loading...</h2>}>
@@ -17,7 +18,6 @@ const App = () => {
           <Outlet/>
         </div>
       </Suspense>
-
     </div>
   );
 };

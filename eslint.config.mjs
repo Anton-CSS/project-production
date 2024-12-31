@@ -23,7 +23,8 @@ export default [
   {
     rules: {
       "no-unused-vars": "warn",
-      "no-undef": "error"
+      "no-undef": "error",
+      'react/react-in-jsx-scope': 'off',
     }
   }
 ];

@@ -1,12 +1,13 @@
-
+import { useTranslation } from 'react-i18next'
 
 export const ErrorPage = () => {
+  const {t } = useTranslation();
   return (
     <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+      <h1>{t('Упс')}</h1>
+      <p>{t('К сожалению, произошла непредвиденная ошибка')}</p>
       <p>
-        <i>Error Page</i>
+        <i>{t('Старница об ошибке')}</i>
       </p>
     </div>
   );
